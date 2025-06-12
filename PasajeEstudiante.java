@@ -1,4 +1,3 @@
-package pasajes;
 
 public class PasajeEstudiante implements Pasaje {
     private VehiculoTransporte vehiculo;
@@ -11,7 +10,8 @@ public class PasajeEstudiante implements Pasaje {
         return vehiculo.calcularCostoBase() * 0.5;
     }
 
+    @Override
     public String toString() {
-        return "Pasaje Estudiante - Costo: " + calcularCostoFinal();
+        return "Pasaje Estudiante - Costo: $" + calcularCostoFinal();
     }
 }

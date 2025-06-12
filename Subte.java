@@ -1,4 +1,3 @@
-package pasajes;
 
 public class Subte extends VehiculoTransporte {
     public Subte(String patente, int capacidad, String empresa) {
@@ -6,6 +5,6 @@ public class Subte extends VehiculoTransporte {
     }
 
     public double calcularCostoBase() {
-        return 80.0;
+        return 120.0;
     }
 }

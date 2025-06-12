@@ -1,4 +1,3 @@
-package pasajes;
 
 public class Colectivo extends VehiculoTransporte {
     public Colectivo(String patente, int capacidad, String empresa) {

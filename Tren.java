@@ -1,4 +1,3 @@
-package pasajes;
 
 public class Tren extends VehiculoTransporte {
     public Tren(String patente, int capacidad, String empresa) {

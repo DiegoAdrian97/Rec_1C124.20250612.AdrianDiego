@@ -1,4 +1,3 @@
-package pasajes;
 
 public class PasajeComun implements Pasaje {
     private VehiculoTransporte vehiculo;
@@ -11,7 +10,8 @@ public class PasajeComun implements Pasaje {
         return vehiculo.calcularCostoBase();
     }
 
+    @Override
     public String toString() {
-        return "Pasaje Común - Costo: " + calcularCostoFinal();
+        return "Pasaje Común - Costo: $" + calcularCostoFinal();
     }
 }

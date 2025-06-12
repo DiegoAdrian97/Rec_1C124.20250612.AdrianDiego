@@ -1,44 +1,40 @@
-package pasajes;
 
 public class Viaje implements Comparable<Viaje> {
     private String nombrePasajero;
-    private Pasaje pasaje;
     private VehiculoTransporte vehiculo;
+    private Pasaje pasaje;
 
-    public Viaje(String nombrePasajero, Pasaje pasaje, VehiculoTransporte vehiculo) {
-        setNombrePasajero(nombrePasajero);
-        this.pasaje = pasaje;
-        this.vehiculo = vehiculo;
-    }
-
-    public String getNombrePasajero() {
-        return nombrePasajero;
-    }
-
-    public void setNombrePasajero(String nombrePasajero) {
-        if (nombrePasajero == null || nombrePasajero.trim().isEmpty()) {
-            throw new IllegalArgumentException("El nombre del pasajero no puede estar vacío");
+    public Viaje(String nombrePasajero, VehiculoTransporte vehiculo, Pasaje pasaje) {
+        if (nombrePasajero == null || nombrePasajero.isEmpty()) {
+            nombrePasajero = "Sin nombre";
         }
         this.nombrePasajero = nombrePasajero;
-    }
-
-    public Pasaje getPasaje() {
-        return pasaje;
-    }
-
-    public VehiculoTransporte getVehiculo() {
-        return vehiculo;
+        this.vehiculo = vehiculo;
+        this.pasaje = pasaje;
     }
 
     public double getCosto() {
         return pasaje.calcularCostoFinal();
     }
 
-    public String toString() {
-        return "Pasajero: " + nombrePasajero + " - " + vehiculo.toString() + " - " + pasaje.toString();
+    public String getNombrePasajero() {
+        return nombrePasajero;
+    }
+
+    public VehiculoTransporte getVehiculo() {
+        return vehiculo;
+    }
+
+    public Pasaje getPasaje() {
+        return pasaje;
     }
 
     public int compareTo(Viaje otro) {
         return Double.compare(this.getCosto(), otro.getCosto());
+    }
+
+    @Override
+    public String toString() {
+        return "Pasajero: " + nombrePasajero + "\n" + vehiculo + "\n" + pasaje;
     }
 }
