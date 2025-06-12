@@ -1,0 +1,107 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>792</x><y>0</y><w>189</w><h>108</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Pasaje
+
+--
+
+-double calcularCostoFinal()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>972</x><y>99</y><w>288</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;.
+&lt;&lt;implements&gt;&gt;</panel_attributes><additional_attributes>10;10;300;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>306</x><y>270</y><w>189</w><h>126</h></coordinates><panel_attributes>
+Colectivo
+
+--
+Colectivo(String patente, int capacidad, String empresa)
+
+--
+
+-double calcularCostoBase()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>594</x><y>252</y><w>189</w><h>171</h></coordinates><panel_attributes>PasajeComun
+--
+-VehiculoTransporte vehiculo
+
+--
++PasajeComun(VehiculoTransporte vehiculo)
++double calcularCostoFinal()
++String toString()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>468</y><w>288</w><h>126</h></coordinates><panel_attributes>
+Tren
+
+--
+Tren(String patente, int capacidad, String empresa)
+
+--
+
+-double calcularCostoBase()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1503</x><y>540</y><w>216</w><h>63</h></coordinates><panel_attributes>ComparadorNombre
+--
+
++int compare(Viajev1, Viaje v2)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>729</x><y>99</y><w>207</w><h>171</h></coordinates><panel_attributes>lt=&lt;&lt;.
+&lt;&lt;implements&gt;&gt;</panel_attributes><additional_attributes>210;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1404</x><y>315</y><w>288</w><h>171</h></coordinates><panel_attributes>main
+--
+-static ArrayList&lt;Viaje&gt; viajes
+-static Scanner scanner
+
+--
++static void main (String[] args)
+-static void mostrarMenu()
+-static void registrarViaje()
+- static void mostrarViajes()- static void mostrarViajes()
+- static void ordenarPorCosto()
+- static void ordenarPorNombre()
+- static void MostrarTotalRecaudado()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1071</x><y>720</y><w>396</w><h>243</h></coordinates><panel_attributes>Viaje
+--
+-String nombrePasajero
+-VehiculoTransporte vehiculo
+-Pasaje pasaje
+--
+
++Viaje (String nombrePasajero, VehiculoTransporte vehiculo, Pasaje pasaje)
++String getNombrePasajero()
++double getCosto()
++Pasaje getPasaje()
++void setNombrePasajero (String nombrePasajero)
++VehiculoTransporte getVehiculo()
++String toString()
++int compareTo(Viaje otro)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1260</x><y>423</y><w>162</w><h>315</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+viajes</panel_attributes><additional_attributes>160;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>1458</x><y>594</y><w>72</w><h>171</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;170;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>945</x><y>99</y><w>207</w><h>639</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;210;690</additional_attributes></element><element><id>Relation</id><coordinates><x>711</x><y>819</y><w>378</w><h>63</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;50;400;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>702</y><w>360</w><h>270</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+VehiculoTransporte
+--
+-String patente
+-int capacidad
+-String empresa
+--
+
++VehiculoTransporte(String patente, int capacidad, String empresa)
++String getPatente()
++void setPatente(String patente)
++int getCapacidad()
++void setCapacidad(int capacidad)
++String getEmpresa()
++void setEmpresa(String empresa)
++double calcularCostoBase()
++String toString() 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>324</x><y>585</y><w>108</w><h>135</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>387</y><w>180</w><h>333</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;350;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>612</x><y>414</y><w>72</w><h>306</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+vehiculo</panel_attributes><additional_attributes>10;10;20;320</additional_attributes></element><element><id>Relation</id><coordinates><x>711</x><y>306</y><w>432</w><h>414</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+vehiculo</panel_attributes><additional_attributes>460;10;10;440</additional_attributes></element><element><id>UMLClass</id><coordinates><x>819</x><y>1008</y><w>189</w><h>171</h></coordinates><panel_attributes>PasajeJubilado
+--
+-VehiculoTransporte vehiculo
+
+--
++PasajeJubilado(VehiculoTransporte vehiculo)
++double calcularCostoFinal()
++String toString()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>711</x><y>756</y><w>126</w><h>414</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+vehiculo</panel_attributes><additional_attributes>120;440;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>918</x><y>99</y><w>99</w><h>927</h></coordinates><panel_attributes>lt=&lt;&lt;.
+&lt;&lt;implements&gt;&gt;</panel_attributes><additional_attributes>10;10;10;1010</additional_attributes></element><element><id>Relation</id><coordinates><x>1314</x><y>918</y><w>279</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.
+</panel_attributes><additional_attributes>170;10;290;90;120;140;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>936</x><y>99</y><w>153</w><h>702</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+pasajes</panel_attributes><additional_attributes>150;760;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>711</x><y>909</y><w>315</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+vehiculo</panel_attributes><additional_attributes>330;20;10;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1026</y><w>297</w><h>72</h></coordinates><panel_attributes>Subte
+
+--
++Subte(String patente, int capacidad, String empresa)
++double calcularCostoBase()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>225</x><y>927</y><w>153</w><h>189</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1116</x><y>216</y><w>252</w><h>108</h></coordinates><panel_attributes>PasajeEstudiante
+--
+-VehiculoTransporte vehiculo
+
+--
++PasajeEstudiante(VehiculoTransporte vehiculo)
++double calcularCostoFinal()
++String toString()
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
